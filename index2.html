@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cmn-hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/css.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="charge-conter">87.7%</div>
+      <div class="contrast-view">
+        <div class="circle-view"></div>
+        <ul class="ul-top-list">
+          <li class="top-cell"></li>
+          <li class="top-cell"></li>
+          <li class="top-cell"></li>
+          <li class="top-cell"></li>
+        </ul>
+        <span class="span bottom-cell"></span>
+        <span class="span left-cell"></span>
+        <span class="span right-cell"></span>
+      </div>
+    </div>
+    <script>
+      const topCells = document.getElementsByClassName("top-cell");
+      for (var i = 0; i < topCells.length; i++) {
+        topCells[i].style.width = `${14 + Math.ceil(Math.random() * 20)}px`;
+        topCells[i].style.height = `${14 + Math.ceil(Math.random() * 14)}px`;
+        topCells[i].style.left = `${40 + Math.ceil(Math.random() * 30)}px`;
+        topCells[i].style.top = "50%";
+        // topCells[i].style.transform = 'translate(-50%, -50%)';
+        topCells[i].style.animation = `moveToBottom ${Math.ceil(
+          Math.random() * 10
+        )}s ease-in-out -${Math.ceil(Math.random() * 10) / 10}s infinite`;
+      }
+    </script>
+  </body>
+</html>
